@@ -56,7 +56,6 @@ body {
   background: var(--black);
   color: var(--ivory);
   overflow-x: hidden;
-  cursor: none;
   width: 100%;
   max-width: 100%;
   min-height: 100%;
@@ -65,7 +64,6 @@ body {
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
-button { cursor: none; border: none; background: none; font-family: inherit; }
 input, textarea, select { font-family: var(--font-body); }
 
 @supports (overflow: clip) {
@@ -73,35 +71,6 @@ input, textarea, select { font-family: var(--font-body); }
   body {
     overflow-x: clip;
   }
-}
-
-/* ─── Custom Cursor ─────────────────────────────────────────── */
-.cursor-dot {
-  width: 6px; height: 6px;
-  background: var(--gold);
-  border-radius: 50%;
-  position: fixed;
-  top: 0; left: 0;
-  z-index: 9999;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.3s;
-}
-.cursor-ring {
-  width: 36px; height: 36px;
-  border: 1.5px solid rgba(201, 169, 110, 0.6);
-  border-radius: 50%;
-  position: fixed;
-  top: 0; left: 0;
-  z-index: 9998;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s, border-color 0.3s;
-}
-body:has(a:hover) .cursor-ring,
-body:has(button:hover) .cursor-ring {
-  width: 60px; height: 60px;
-  border-color: var(--gold);
 }
 
 /* ─── Container ─────────────────────────────────────────────── */
@@ -272,7 +241,7 @@ body:has(button:hover) .cursor-ring {
   letter-spacing: 0.05em;
 }
 .nav-logo-img {
-  height: 44px;
+  height: 64px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -924,7 +893,6 @@ body:has(button:hover) .cursor-ring {
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  cursor: none;
 }
 
 .portfolio-item.large {
@@ -1607,7 +1575,6 @@ body:has(button:hover) .cursor-ring {
   border-radius: 50%;
   background: rgba(201, 169, 110, 0.3);
   transition: var(--transition);
-  cursor: none;
 }
 .slider-dot.active {
   background: var(--gold);
@@ -2072,7 +2039,6 @@ body:has(button:hover) .cursor-ring {
   :root { --section-pad: 60px; }
 
   body { cursor: auto; }
-  .cursor-dot, .cursor-ring { display: none; }
 
   .container { padding: 0 20px; }
 
